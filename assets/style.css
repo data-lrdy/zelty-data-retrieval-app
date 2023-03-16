@@ -1,0 +1,55 @@
+body, htlm {
+    background-color: #121212;
+    color: lightgrey!important;
+    font-family: var(--bs-font-monospace);
+}
+
+/* center block */
+.centered {
+    display: flex;  /* use the flexbox display model */
+    flex-direction: column;  /* stack elements vertically */
+    justify-content: center;  /* vertically center elements */
+    height: 90vh;  /* specify height of the parent Div */
+    max-width: 100%;  /* limit the maximum width of the parent Div to 100% */
+    overflow: hidden;  /* hide content that overflows the specified height */
+}
+
+.center-right {
+    display: flex; /* Use the flexbox display model */
+    justify-content: center; /* Horizontally center the element */
+    align-items: center; /* Vertically center the element */
+    margin-left: auto; /* Horizontally center the element by automatically moving the left margin */
+    width: 40%; /* Set the width of the element to 40% of the parent Div's width */
+    padding-bottom: 1rem;
+}
+
+
+.card{
+    background-color: #161616;
+    border-color: #333232;
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+
+/* dark dropdown */
+.Select-control{
+    background-color: #161616;
+    color: lightgrey;
+}
+
+.Select-menu-outer{
+    background-color: #161616;
+    color: lightgrey;
+}
+
+.Select-value{
+    background-color: #161616;
+    color: lightgrey!important;
+}
+
+.Select-value-label{
+    background-color: #161616;
+    color: lightgrey!important;
+}
