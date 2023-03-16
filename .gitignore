@@ -1,4 +1,5 @@
 env
+config
 eda_v1.ipynb
 *.pyc 
 .env 

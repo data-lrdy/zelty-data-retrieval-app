@@ -5,9 +5,16 @@ from google.oauth2 import service_account
 from google.cloud import bigquery
 import pandas as pd
 import plotly.express as px
+import pandas_gbq
 
-# To import data from BigQuery
-credentials = service_account.Credentials.from_service_account_file('config.json')
+import os
+
+# Récupération des informations d'identification de BigQuery depuis les variables d'environnement
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'config/credentials.json'
+
+credentials = service_account.Credentials.from_service_account_file(os.environ["GOOGLE_APPLICATION_CREDENTIALS"])
+
 
 # Initialize query
 sql_query = """
@@ -16,7 +23,6 @@ select * from dbt_prod.revenue
 
 # Import data from big query
 df = pd.read_gbq(sql_query, project_id=credentials.project_id, credentials=credentials)
-
 # Get the name of the restaurants
 restaurants = df['restaurant'].unique()
 # Replacing real restaurant names by fictive oens
