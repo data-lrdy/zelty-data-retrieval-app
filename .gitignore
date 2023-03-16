@@ -1,3 +1,6 @@
 env
 config.json
 eda_v1.ipynb
+*.pyc 
+.env 
+.DS_Store
