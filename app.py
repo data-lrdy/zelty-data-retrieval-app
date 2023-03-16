@@ -108,7 +108,7 @@ def update_graph(restaurant, metric):
 
     # No restaurant filter
     else:
-        dff = df.groupby('day')[metric].sum().reset_index()
+        dff = df.groupby('day')[metric].sum().reset_index() # group data by day
 
     # Change color depending of the restaurant
     if restaurant == restaurants[0]:
